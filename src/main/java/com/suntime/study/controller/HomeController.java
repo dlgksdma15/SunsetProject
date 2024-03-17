@@ -15,4 +15,8 @@ public class HomeController {
     public String study(){
         return "study";
     }
+    @GetMapping("/personal")
+    public String personal(){
+        return "personal";
+    }
 }

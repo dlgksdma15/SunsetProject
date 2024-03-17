@@ -3,68 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>일몰시 로그인 페이지</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        form {
-            background-color: #fff;
-            max-width: 300px;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #333;
-        }
-        input[type="text"],
-        input[type="password"] {
-            width: calc(100% - 20px);
-            padding: 8px;
-            margin: 5px 0 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        a {
-            text-decoration: none;
-            color: #4CAF50;
-            margin-top: 10px;
-            display: inline-block;
-        }
-        a:hover {
-            color: #45a049;
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta name="keyword" content="일몰시">
+    <meta name="description" content="일몰시">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
 </head>
 <body>
-<h2>일몰시 로그인 페이지</h2>
-<form action="/index" method="post">
-    이메일<br>
-    <input type="text" name="memberEmail"><br>
-    비밀번호<br>
-    <input type="password" name="memberPassword"><br>
-    <input type="submit" value="로그인">
-    <a href="/save"> 회원가입 </a>
-</form>
+    <div class="container">
+        <img src="../img/icon.png" alt="일몰 이미지" class="sunset-image">
+        <h1>일몰시</h1>
+        <form action="/index" method="post">
+            이메일<br>
+            <input type="text" name="memberEmail"><br>
+            비밀번호<br>
+            <input type="password" name="memberPW"><br>
+            <input type="submit" value="로그인">
+            <a href="/register"> 회원가입 </a>
+        </form>
+    </div>
 <br>
-<a href="/study">스터디 게시판 가기</a>
+<a href="/personal">스터디 게시판 가기</a>
 </body>
 </html>

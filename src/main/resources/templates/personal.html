@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop</title>
+    <link rel="stylesheet" href="../css/personal.css">
+</head>
+<body>
+<div class="Desktop1">
+    <select class="select" style="left: 69%; width:8%; top:34%">
+        <option value="" disabled selected hidden>과목선택</option>
+        <!-- Thymeleaf를 사용하여 subject_table 리스트를 반복하면서 옵션을 생성합니다. -->
+        <option th:each="entity : ${subject_table}" th:value="${entity.id}" th:text="${entity.name}"></option>
+    </select>
+    <input class="select" style="top: 38%; left:69%; width:8% " type="subject" name="subject">
+    <div class="Timer" id="timer">00:00:00</div>
+    <div class="ButtonContainer">
+        <button class="Button" id="todoButton"> To-Do</button>
+        <button class="Button" id="studyTimeButton">Total Time</button>
+        <button class="Button" id="boardButton">게시판</button>
+        <button class="Button" id="startButton">Start</button>
+        <button class="Button" id="stopButton">Stop</button>
+    </div>
+    <form action="/personal/subject" method="post">
+        <button class="Button1" id="addsub" style="left: 60%; top:38%; width:8%" >과목 추가</button>
+        <input class="select" style="top: 38%; left:69%; width:8% " type="subject" name="subject">
+    </form>
+    <button class="Button1" id="delsub" style="left: 60%; width:8%;">과목 삭제</button>
+</div>
+<script src="../js/personal.js"></script>
+</body>
+</html>
